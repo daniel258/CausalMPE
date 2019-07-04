@@ -7,7 +7,6 @@ rm(list =ls())
 library(dplyr)
 
 
-n.sample <- 1000
 ##########################################################################################
 #### Create the artifical example given in the paper appendix ####
 
