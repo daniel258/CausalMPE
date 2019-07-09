@@ -1,9 +1,9 @@
 ##########################################################################################
 ## CausalMPE project
-### illustration of the proposed senstivity analysis for SSACE in the paper:
+### illustration of the proposed senstivity sensitivity for SSACE in the paper:
 # Causal effects in the presence of disease etiologic heterogeneity 
 ##########################################################################################
-# A function that carries out the senstivity analysis suggested in the paper: 
+# A function that carries out the senstivity sensitivity suggested in the paper: 
 SensFun <- function(coef1, coef2, eta1, eta2, coef.covmat)
 {
   RR1 <- exp(coef1)

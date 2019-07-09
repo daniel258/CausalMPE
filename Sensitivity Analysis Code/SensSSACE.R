@@ -1,15 +1,15 @@
 ##########################################################################################
 ## CausalMPE project
-### illustration of the proposed senstivity analysis for SSACE in the paper:
+### illustration of the proposed sensitivity analysis for SSACE in the paper:
 # Causal effects in the presence of disease etiologic heterogeneity 
 ##########################################################################################
 
-### Preform the proposed senstivity analysis for the simulated dataset created in
+### Preform the proposed sensitivity analysis for the simulated dataset created in
 # HypoDataSensSSACE.R
 library(sandwich) # For robust standard errors
 library("scatterplot3d") # For 3D figure
 ##########################################################################################
-# A function that carries out the senstivity analysis suggested in the paper: 
+# A function that carries out the sensitivity analysis suggested in the paper: 
 # Check also SensFun.R
 SensFun <- function(coef1, coef2, eta1, eta2, coef.covmat)
 {
@@ -73,7 +73,7 @@ my.sd <- sqrt(c(point1.est, -point2.est)%*%vcov.sand[2:3, 2:3]%*%c(point1.est, -
 c(point.est -   1.96 * my.sd, point.est +   1.96 * my.sd) # These numbers went into the paper
 point.est # CI for Naive RR1 - Naive RR2
 ##########################################################################################
-## Finally, the senstivity analysis - for each combination of values for eta1 and eta2 between 0.5 and 2
+## Finally, the sensitivity analysis - for each combination of values for eta1 and eta2 between 0.5 and 2
 my.etas1 <- my.etas2 <-  seq(0.5, 2, 0.1)
 n.etas1 <- length(my.etas1)
 n.etas2 <- length(my.etas2)
@@ -96,7 +96,7 @@ colnames(SACE.sens) <- c("eta1", "eta2", "RR_Diff", "RR_CI_L", "RR_CI_H")
 CI.in <- apply(SACE.sens[, 4:5], 1, function(A) {findInterval(0, A)})
 SACE.sens$out <- CI.in!=1
 ##########################################################################################
-# Created a figure similiar to Figure 4 in the paper
+# Create a figure similar to Figure 4 in the paper
 SACE.sens$out.ci <- ifelse(SACE.sens$out==0,  "0 is not included in the CI", "0 included in the CI")
 colors <- c("#999999", "#56B4E9")
 colors <- colors[SACE.sens$out+1]
