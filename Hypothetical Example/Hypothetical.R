@@ -7,6 +7,7 @@ rm(list =ls())
 library(dplyr)
 
 
+n.sample <- 1000
 ##########################################################################################
 #### Create the artifical example given in the paper appendix ####
 
@@ -25,3 +26,6 @@ Y2 <- Y==2
 exp(coef(glm(Y2 ~ A + U, family = "binomial", subset = Y!=1))[2])
 # The marginla OR between Subtype 2 and  on A is 0.8285714
 exp(coef(glm(Y2 ~ A, family = "binomial", subset = Y!=1))[2])
+
+
+
