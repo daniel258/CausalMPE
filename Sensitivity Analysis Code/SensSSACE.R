@@ -9,7 +9,8 @@
 library(sandwich) # For robust standard errors
 library("scatterplot3d") # For 3D figure
 ##########################################################################################
-# A function that carries out the senstivity analysis suggested in the paper
+# A function that carries out the senstivity analysis suggested in the paper: 
+# Check also SensFun.R
 SensFun <- function(coef1, coef2, eta1, eta2, coef.covmat)
 {
   RR1 <- exp(coef1)
