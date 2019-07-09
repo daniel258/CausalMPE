@@ -1,6 +1,6 @@
 #############################################
 ## CausalMPE project
-# This script combines the results from multiple simualation scripts carried online on the O2 cluster
+# This script combines the results from multiple simulation scripts carried online on the O2 cluster
 # This set of simulations concerned a scenario where there is only one subtype. 
 # This is a benchmark for problems from not using U
 #########################################
