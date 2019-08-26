@@ -46,7 +46,8 @@ my.data.aug$asp_1 <- ifelse(my.data.aug$type==1, my.data.aug$aspirin, 0)
 my.data.aug$asp_2 <- ifelse(my.data.aug$type==2, my.data.aug$aspirin, 0)
 my.data.aug$Y.any <- ifelse(my.data.aug$Y==0, 0, 1) # Y.any is indicator that Y>0
 # Set weights according to the estimated PS and aspirin status 
-wi <- ifelse(my.data.aug$aspirin==1, 1/ps, 1/(1-ps))
+pr.asp <- mean(my.data$aspirin==1)
+wi <- ifelse(my.data.aug$aspirin==1, pr.asp/ps, (1 - pr.asp)/(1 - ps))
 summary(wi)
 # Fit the duplication method logistic regression with weights
 fit.aug.w <- glm(Y.any ~ asp_1 + asp_2 + factor(type), data = my.data.aug, family = "binomial", 
@@ -65,6 +66,7 @@ point1.ci <- exp(coef(fit.aug.w)[2]+ c(-1, 1)* 1.96 * sqrt(vcov.sand[2, 2]))
 point2.ci <- exp(coef(fit.aug.w)[3]+ c(-1, 1)* 1.96 * sqrt(vcov.sand[3, 3]))
 point1.ci # CI for Naive RR1
 point2.ci # CI for Naive RR1
+
 point.est <- point1.est - point2.est
 point.est # Naive RR1 - Naive RR2
 
