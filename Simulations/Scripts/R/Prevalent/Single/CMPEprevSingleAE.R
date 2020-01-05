@@ -14,13 +14,13 @@ CalcCImultinom <- function(fit)
 #key
 # A, B,C,D,E,F,G - betaE[2] = 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5
 # A,B,C, D, E,F - betaU = 2,3,4,5,6,7
-
-patt <- "AD"
-beta0 <- -5
+patt <- "AE"
+set.seed(5015)
+beta0 <- 0
 betaE <- log(1)
-betaU <- log(4)
+betaU <- log(6)
 sigmaU <- 1
-n.sample <- 50000
+n.sample <- 2000
 n.sim <- 1000
 AllY <- vector(length = n.sim)
 ace.diff1 <- ace.or1 <- vector(length = n.sim)
@@ -55,4 +55,4 @@ ci[j, ] <- confint(fit)[2,]
 
 }
 
-save.image(paste0("CMPEn50krareSingle",patt,".RData"))
+save.image(paste0("CMPEprevSingle",patt,".RData"))
