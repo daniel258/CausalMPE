@@ -19,7 +19,7 @@ The *Simulations* folder includes four folders:
 4. **PlotScripts**: Scripts to recreate the plots (in the **Plots** folder) using the simulation results (from the **Results** folder).
 
 ## Hypothetical Example
-A script named Hypothetical.R loading the data give in the Appendix of the paper and calculate the values that demonstrate the selection bias.
+- *Hypothetical.R* creates the hypothetical dataset given in the Appendix of the paper and calculates the values that demonstrate the selection bias.
 
 ## Senstivity Analysis Code
 - *SensFun.R* contains an **R** function implementing the proposed sensitivity analysis give eta1 and eta2, the naive relative risks and the SE estimates (and covariance).
