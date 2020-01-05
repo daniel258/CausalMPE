@@ -1,5 +1,5 @@
 # CausalMPE
-R Code and simulations associated with the paper "Causal effects in the presence of disease etiologic heterogeneity" by Nevo et al. Comments and suggestions are welcomed and can be sent to 
+R Code and simulations associated with the paper "Causal inference considerations for molecular pathological epidemiology" by Nevo et al. Comments and suggestions are welcomed and can be sent to 
 danielnevo :panda_face: @ :panda_face: gmail.com (remove the pandas).
 
 This repository includes three main parts
