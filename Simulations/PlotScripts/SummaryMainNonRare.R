@@ -4,8 +4,8 @@ library(ggplot2)
 library(dplyr)
 library(xtable)
 
-n.sample <- 50000
-all.res <- read.csv("/Users/danielnevo/Dropbox/CausalMPE/R/CausalMPE/Simulations/Results/all.res.main.csv")
+n.sample <- 5000
+all.res <- read.csv("/Users/danielnevo/Dropbox/CausalMPE/R/CausalMPE/Simulations/Results/all.res.main.nonrare.csv")
 
 
 df <- all.res %>% as.data.frame 
@@ -84,7 +84,7 @@ df.summ %>% ggplot(aes(x = betaU, col = factor(betaE), y = m.ace.or2)) + theme_b
         legend.text = element_text(size = 14),
         legend.title = element_text(size = 14),
         legend.key.width = unit(1.5,"cm")
-  )
+  ) 
 
 
 

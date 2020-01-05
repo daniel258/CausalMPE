@@ -4,8 +4,8 @@ library(ggplot2)
 library(dplyr)
 library(xtable)
 
-n.sample <- 50000
-all.res.null <- read.csv("/Users/danielnevo/Dropbox/CausalMPE/R/CausalMPE/Simulations/Results/all.res.null.csv")
+n.sample <- 2000
+all.res.null <- read.csv("/Users/danielnevo/Dropbox/CausalMPE/R/CausalMPE/Simulations/Results/all.res.null.prev.csv")
 
 df <- all.res.null %>% as.data.frame 
 # How many health? How mayn of each subtype?
