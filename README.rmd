@@ -20,6 +20,9 @@ The *Simulations* folder includes four folders:
 
 ## Hypothetical Example
 A script named Hypothetical.R loading the data give in the Appendix of the paper and calculate the values that demonstrate the selection bias.
+
 ## Senstivity Analysis Code
-The script SensFun.R contains an **R** function implementing the proposed sensitivity analysis give eta1 and eta2, the naive relative risks and the SE estimates (and covariance)
-The Script *HypoDataSensSSACE.R* creates the dataset *my.sim.data.csv*. This dataset was created to be similar to our dataset used as an illustrative data example in the paper. The script *SensSSACE.R* demonstrates how to carry out the suggested sensitivity analysis when considering the SSACE.
+- *SensFun.R* contains an **R** function implementing the proposed sensitivity analysis give eta1 and eta2, the naive relative risks and the SE estimates (and covariance).
+- *HypoDataSensSSACE.R* creates the dataset *my.sim.data.csv*. This dataset was created to be similar to illustrative data example in the paper.
+- *SensSSACE.R* demonstrates how to carry out the suggested sensitivity analysis when considering the SSACE.
+
