@@ -1,6 +1,6 @@
 #############################################
 ## CausalMPE project
-# This script combines the results from multiple simualation scripts carried online on the O2 cluster
+# This script combines the results from multiple simualation scripts carried out on my computer.
 # This set of simulations concerned a scenario where the effect of the exposure was zero on both 
 # cancer subtypes.
 #########################################
@@ -8,17 +8,17 @@ rm(list = ls())
 library(Daniel)
 library(dplyr)
 x <- c(11:16, 21:26, 31:36, 41:46, 51:56, 61:66, 71:76)
-all.patts.new <- chartr("123456789", "ABCDEFGHI", x)
-all.res <- matrix(nr = length(all.patts.new)*1000, nc = 7)
-keep <- list(c("keep", "all.patts.new","all.res", "ii"))
+all.patts <- chartr("123456789", "ABCDEFGHI", x)
+all.res <- matrix(nr = length(all.patts)*1000, nc = 7)
+keep <- list(c("keep", "all.patts","all.res", "ii"))
 #j <- 1
-setwd("/home/dn84/CausalMPE/Results/Single/Rare/")
-for (ii in 1:length(all.patts.new))
+setwd("/Users/danielnevo/Dropbox/CausalMPE/R/RawResultsPrev/Single")
+for (ii in 1:length(all.patts))
 {
  # j <- j + 1
   CatIndex(ii)
-  temp.patt <- all.patts.new[ii]
-  load(paste0("CMPEn50krareSingle",temp.patt,".RData"))
+  temp.patt <- all.patts[ii]
+  load(paste0("CMPEprevSingle",temp.patt,".RData"))
   all.res[((ii - 1) * 1000 + 1):(ii * 1000) , 1] <- AllY
   all.res[((ii - 1) * 1000 + 1):(ii * 1000) , 2] <- ace.diff1
   all.res[((ii - 1) * 1000 + 1):(ii * 1000) , 3:4] <- ci
@@ -29,5 +29,6 @@ for (ii in 1:length(all.patts.new))
 }
 
 colnames(all.res) <- c("Y", "ace.diff1", "ci1.L", "ci1.H", "ace.or1", "betaE","betaU")
-setwd("/home/dn84/CausalMPE/")
-write.csv(all.res, "all.res.single.csv", row.names = F)
+#setwd("/home/dn84/CausalMPE/")
+
+write.csv(all.res, "all.res.single.prev.csv", row.names = F)

@@ -10,5 +10,5 @@
 #SBATCH -e SummarizeOnline.R.err               # Standard err goes to this file
 #SBATCH --mail-type=END         # Mail when the job ends  
 #write command-line commands below this line
-module load gcc/6.2.0 R/3.4.1
+module load gcc/6.2.0 R/3.5.1
 Rscript SummarizeOnlineSingle.R
