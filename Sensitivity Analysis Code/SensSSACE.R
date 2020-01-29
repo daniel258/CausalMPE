@@ -8,6 +8,7 @@
 # HypoDataSensSSACE.R
 library(sandwich) # For robust standard errors
 library("scatterplot3d") # For 3D figure
+library(dplyr)
 ##########################################################################################
 # A function that carries out the sensitivity analysis suggested in the paper: 
 # Check also SensFun.R
@@ -25,7 +26,8 @@ SensFun <- function(coef1, coef2, eta1, eta2, coef.covmat)
 }
 ###################################################################################
 # Load data
-my.data <- read.table("my.sim.data.csv")
+#my.data <- read.table("my.sim.data.csv")
+n.sample <- nrow(my.data)
 ###################################################################################
 # Fit a logistic regression model for the propensity score
 fit.ps <- glm(aspirin~ family + pkyr  + bmi, data = my.data, family = "binomial")
@@ -59,16 +61,16 @@ vcov.sand <- sandwich(fit.dupl.w)
 fit.dupl.w
 ##########################################################################################
 ##### Calculate naive point estimates and confidence intervals ####
-point1.est <- exp(coef(fit.aug.w)[3])
-point2.est <- exp(coef(fit.aug.w)[4])
+point1.est <- exp(coef(fit.dupl.w)[3])
+point2.est <- exp(coef(fit.dupl.w)[4])
 point1.est # Naive RR1
 point2.est # Naive RR2
-point1.ci <- exp(coef(fit.aug.w)[3]+ c(-1, 1)* 1.96 * sqrt(vcov.sand[3, 3]))
-point2.ci <- exp(coef(fit.aug.w)[4]+ c(-1, 1)* 1.96 * sqrt(vcov.sand[4, 4]))
+point1.ci <- exp(coef(fit.dupl.w)[3]+ c(-1, 1)* 1.96 * sqrt(vcov.sand[3, 3]))
+point2.ci <- exp(coef(fit.dupl.w)[4]+ c(-1, 1)* 1.96 * sqrt(vcov.sand[4, 4]))
 point1.ci # CI for Naive RR1
 point2.ci # CI for Naive RR1
 
-point.est <- point1.est - point2.est
+point.est <- unname(point1.est - point2.est)
 point.est # Naive RR1 - Naive RR2
 
 # SE by the delta method
@@ -86,7 +88,7 @@ SACE.sens[, 2] <- rep(my.etas2, n.etas1)
 # Apply SensFun for each unique combination
 for (i in 1:(n.etas1 * n.etas2))
 {
-  SACE.sens.temp <- SensFun(coef1 = coef(fit.aug.w)[3], coef2 = coef(fit.aug.w)[4], 
+  SACE.sens.temp <- SensFun(coef1 = coef(fit.dupl.w)[3], coef2 = coef(fit.dupl.w)[4], 
                             eta1 = SACE.sens[i, 1], eta2 = SACE.sens[i, 2], 
                             coef.covmat = vcov.sand[3:4, 3:4])
   SACE.sens[i, 3] <- SACE.sens.temp$RR.diff %>% round(2)
