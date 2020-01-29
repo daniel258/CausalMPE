@@ -33,10 +33,10 @@ bmi[bmi < 15] <- sample(15:25, sum(bmi < 15), replace = T)
 ###################################################################################
 #Simulate exposure (aspirin) values according to the estimated PS model in the
 # illustrative example dataset
-term.for.prob <- -1.35 + 0.056*family + 0.0044*pkyr + 0.015*bmi
+term.for.prob <- -1.35 + 0.06*family + 0.0044*pkyr + 0.015*bmi
 prob.asp <- exp(term.for.prob)/(1 + exp(term.for.prob))
 aspirin <- rbinom(n = n.sample, size = 1, prob = prob.asp)
-#Simulate potential outcomes from the results of teh fitted MSM model in the
+#Simulate outcome from a fitted multinomial regression model similar  to the
 # illustrative example dataset (for non.msi aspirin effect was somewhat closer to null)
 #Order:  (Intercept)     aspirin    family      bmi        pkyr
 beta.non.msi <- c(-5.7, -0.25, 0.5, -0.0014, 0.007) 
