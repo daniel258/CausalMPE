@@ -26,7 +26,7 @@ SensFun <- function(coef1, coef2, eta1, eta2, coef.covmat)
 }
 ###################################################################################
 # Load data
-#my.data <- read.table("my.sim.data.csv")
+my.data <- read.table("my.sim.data.csv")
 n.sample <- nrow(my.data)
 ###################################################################################
 # Fit a logistic regression model for the propensity score
