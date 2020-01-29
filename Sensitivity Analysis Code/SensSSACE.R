@@ -1,7 +1,7 @@
 ##########################################################################################
 ## CausalMPE project
 ### illustration of the proposed sensitivity analysis for SSACE in the paper:
-# Causal effects in the presence of disease etiologic heterogeneity 
+# Causal inference considerations for molecular pathological epidemiology
 ##########################################################################################
 
 ### Preform the proposed sensitivity analysis for the simulated dataset created in

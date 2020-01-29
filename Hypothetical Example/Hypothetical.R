@@ -1,7 +1,7 @@
 ##########################################################################################
 ## CausalMPE project
 #### Analysis of the hypothetical example given in the appendix of the paper
-# Causal effects in the presence of disease etiologic heterogeneity 
+# Causal inference considerations for molecular pathological epidemiology
 ##########################################################################################
 rm(list =ls())
 library(dplyr)
