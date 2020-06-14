@@ -53,8 +53,8 @@ df.summ %>% ggplot(aes(x = betaU, group = factor(betaE) , y = m.ace.or1)) +
         axis.text=element_text(size=12),
         legend.text = element_text(size = 14),
         legend.title = element_text(size = 14),
-        legend.key.width = unit(1.5,"cm")
-        ) + ylim(c(0.75,1.05))
+        legend.key.width = unit(1.5,"cm"))
+#        ) + ylim(c(0.75,1.05))
 
 df.summ %>% ggplot(aes(x = betaU, group = factor(betaE) , y = m.ace.or2)) + 
   theme_bw() + geom_line(size = 2, aes(col = factor(betaE), linetype = factor(betaE))) + 
