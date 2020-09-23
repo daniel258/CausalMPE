@@ -12,7 +12,40 @@ Main        |      1       | 1st letter   | 2nd letter  | 2nd letter  |
 1           |      1       | 1st letter   |     5       | 2nd letter  |
 1a          |      1       | 1st letter   | 2nd letter  |      5      |
 2           |      1       | 1st letter   |     2.5     | 2nd letter  |
-3           |      1       | 1st letter   |     5       | 2nd letter  |
-4           |      1       | 1st letter   |     5       | 2nd letter  |
+3           |      1       | 1st letter   |     0.4     | 2nd letter  |
+4           |      1       | 1st letter   | 2nd letter  |     2.5     |
+5           |      1       | 1st letter   | 2nd letter  |     0.4     |
+6           |      1       | 1st letter   |     0.2     | 2nd letter  |
+7           |      1       | 1st letter   | 2nd letter  |     0.2     |
+8           |      1       | 1st letter   |     1.5     | 2nd letter  |
+8a          |      1       | 1st letter   | 2nd letter  |     1.5     |
+9           |      1       | 1st letter   |     2/3     | 2nd letter  |
+9a          |      1       | 1st letter   | 2nd letter  |     2/3     |
+10          |     2.5      | 1st letter   | 2nd letter  | 2nd letter  |
+11          |     2.5      | 1st letter   |     5       | 2nd letter  |
+11a         |     2.5      | 1st letter   | 2nd letter  |      5      |
+12          |     2.5      | 1st letter   |     2.5     | 2nd letter  |
+13          |     2.5      | 1st letter   |     0.4     | 2nd letter  |
+14          |     2.5      | 1st letter   | 2nd letter  |     2.5     |
+15          |     2.5      | 1st letter   | 2nd letter  |     0.4     |
+16          |     2.5      | 1st letter   |     0.2     | 2nd letter  |
+17          |     2.5      | 1st letter   | 2nd letter  |     0.2     |
+18          |     2.5      | 1st letter   |     1.5     | 2nd letter  |
+18a         |     2.5      | 1st letter   | 2nd letter  |     1.5     |
+19          |     2.5      | 1st letter   |     2/3     | 2nd letter  |
+19a         |     2.5      | 1st letter   | 2nd letter  |     2/3     |
+20          |     1.5      | 1st letter   | 2nd letter  | 2nd letter  |
+21          |     1.5      | 1st letter   |     5       | 2nd letter  |
+21a         |     1.5      | 1st letter   | 2nd letter  |      5      |
+22          |     1.5      | 1st letter   |     2.5     | 2nd letter  |
+23          |     1.5      | 1st letter   |     0.4     | 2nd letter  |
+24          |     1.5      | 1st letter   | 2nd letter  |     2.5     |
+25          |     1.5      | 1st letter   | 2nd letter  |     0.4     |
+26          |     1.5      | 1st letter   |     0.2     | 2nd letter  |
+27          |     1.5      | 1st letter   | 2nd letter  |     0.2     |
+28          |     1.5      | 1st letter   |     1.5     | 2nd letter  |
+28a         |     1.5      | 1st letter   | 2nd letter  |     1.5     |
+29          |     1.5      | 1st letter   |     2/3     | 2nd letter  |
+29a         |     1.5      | 1st letter   | 2nd letter  |     2/3     |
 
 
