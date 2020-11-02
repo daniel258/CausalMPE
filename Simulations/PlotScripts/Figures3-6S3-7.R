@@ -1,5 +1,9 @@
+#####################################################################################
+# This script load many simulation results and produce Figures 3-7 in the main text
+# and Supplementary Figures S3 - S6
+# Daniel Nevo
+#####################################################################################
 rm(list = ls())
-library(Daniel)
 library(ggplot2)
 library(dplyr)
 library(xtable)
