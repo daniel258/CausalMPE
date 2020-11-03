@@ -18,7 +18,7 @@ CalcCImultinom <- function(fit)
 patt <- "AE"
 beta0 <- c(-6, -5)
 betaE <- c(log(1), log(1.25))
-betaU <- c(log(5), log(6))
+betaU <- c(log(6), log(6))
 sigmaU <- 1
 n.sample <- 50000
 n.sim <- 1000
