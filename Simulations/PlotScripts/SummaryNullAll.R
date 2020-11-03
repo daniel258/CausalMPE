@@ -81,7 +81,7 @@ df.plot %>% ggplot(aes(x = betaU,  y = m.or.est, group = Subtype)) + theme_bw() 
   geom_line(size = 2, aes(col = Subtype, linetype = Subtype)) + 
   ylab("Mean estimated OR Subtype/control") +
   xlab("True OR between U and each subtype") + 
-  ylim(c(0.7,1.3)) + 
+  ylim(c(0.85,1.05)) + 
   guides(override.aes = list(guide_legend(linetype = override.linetype,
                                           colour = override.color))) + 
   theme(strip.text = element_text(size=14),
